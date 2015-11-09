@@ -45,8 +45,7 @@ public class Maps_Screen extends Activity {
     double latitude,longitude;
     // Google Map
     private GoogleMap googleMap;
-    String details,name,contact,lati,longi,vehicle_num;
-    int id;
+    String details,name,contact,lati,longi,vehicle_num,id;
     int $num;
     User_Info user;
     @Override
@@ -66,7 +65,7 @@ public class Maps_Screen extends Activity {
             lati = jObject.getString("lati");
             longi = jObject.getString("longi");
             vehicle_num = jObject.getString("vehicle");
-            id = jObject.getInt("_id");
+            id = jObject.getString("_id");
             Log.i("user_data","lati: "+lati+" longi: "+longi+" veh "+vehicle_num);
         } catch (JSONException e1) {
             e1.printStackTrace();
@@ -242,7 +241,7 @@ public class Maps_Screen extends Activity {
                 lati = jObject.getString("lati");
                 longi = jObject.getString("longi");
 //                vehicle_num = jObject.getString("vehicle");
-                id = jObject.getInt("_id");
+                id = jObject.getString("_id");
             } catch (JSONException e1) {
                 e1.printStackTrace();
                 // Toast.makeText(getBaseContext(), "No item Found",

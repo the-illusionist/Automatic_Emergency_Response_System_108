@@ -9,7 +9,7 @@ public class User_Info {
     private String contact;
     private String latitude;
     private String longitude;
-    private Integer id;
+    private String id;
 
     public String getName() {
         return name;
@@ -43,11 +43,11 @@ public class User_Info {
         this.longitude = longitude;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

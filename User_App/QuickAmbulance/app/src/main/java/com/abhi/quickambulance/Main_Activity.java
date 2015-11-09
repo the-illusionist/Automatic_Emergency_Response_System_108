@@ -9,12 +9,15 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ParseException;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -35,6 +38,7 @@ public class Main_Activity extends Activity {
 
 	Button btn;
 	EditText eT,eT2;
+	CheckBox cB;
 	// GPSTracker class
 	GPSTracker gps;
 	String name,contact,lati,longi;
@@ -56,40 +60,51 @@ public class Main_Activity extends Activity {
         btn = (Button) findViewById(R.id.button);
 		eT = (EditText) findViewById(R.id.editText);
         eT2 = (EditText) findViewById(R.id.editText2);
+		cB = (CheckBox) findViewById(R.id.checkBox);
+		loadSavedPreferences();
         // show location button click event
         btn.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
 
-				gps = new GPSTracker(Main_Activity.this);
-				// check if GPS enabled
-				double latitude = 0;
-				double longitude = 0;
-				if (gps.canGetLocation()) {
-					//while (latitude == 0) {
-						latitude = gps.getLatitude();
-						longitude = gps.getLongitude();
-					//}
-					lati=Double.toString(latitude);
-					longi=Double.toString(longitude);
-					Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
-				} else {
-					gps.showSettingsAlert();
-				}
+
 
 				Connection_Detector cd = new Connection_Detector(getApplicationContext());
 				name=eT.getText().toString().trim();
 				contact=eT2.getText().toString().trim();
+				String MobilePattern = "[0-9]{10}";
 				if (name.equals("")) {
 					Toast.makeText(Main_Activity.this,
 							"Name Field is empty", Toast.LENGTH_SHORT).show();
-				} else if (contact.equals("")) {
+				} else if (!contact.toString().matches(MobilePattern)) {
 					Toast.makeText(Main_Activity.this,
-							"Contact Field is empty", Toast.LENGTH_SHORT).show();
+							"Invalid Mobile number", Toast.LENGTH_SHORT).show();
 				} else if (cd.isConnectingToInternet())
 				// true or false
 				{
+					savePreferences("CheckBox_Value", cB.isChecked());
+					if (cB.isChecked()) {
+						savePreferences("saved_id", eT.getText().toString());
+						savePreferences("saved_contact", eT2.getText().toString());
+					}
+
+					gps = new GPSTracker(Main_Activity.this);
+					// check if GPS enabled
+					double latitude = 0;
+					double longitude = 0;
+					if (gps.canGetLocation()) {
+						//while (latitude == 0) {
+						latitude = gps.getLatitude();
+						longitude = gps.getLongitude();
+						//}
+						lati=Double.toString(latitude);
+						longi=Double.toString(longitude);
+						Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+					} else {
+						gps.showSettingsAlert();
+					}
+
 					new HttpAsyncTask().execute("http://172.16.100.139:3000");
 				} else {
 					showAlertDialog(Main_Activity.this,
@@ -98,6 +113,38 @@ public class Main_Activity extends Activity {
 				}
 			}
 		});
+	}
+
+	private void loadSavedPreferences() {
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
+		boolean checkBoxValue = sharedPreferences.getBoolean("CheckBox_Value", false);
+		String saved_id = sharedPreferences.getString("saved_id", "");
+		String saved_contact = sharedPreferences.getString("saved_contact", "");
+		if (checkBoxValue) {
+			cB.setChecked(true);
+		} else {
+			cB.setChecked(false);
+		}
+
+		eT.setText(saved_id);
+		eT2.setText(saved_contact);
+	}
+
+	private void savePreferences(String key, boolean value) {
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		editor.putBoolean(key, value);
+		editor.commit();
+	}
+
+	private void savePreferences(String key, String value) {
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
+		SharedPreferences.Editor editor = sharedPreferences.edit();
+		editor.putString(key, value);
+		editor.commit();
 	}
 
 	public void showAlertDialog(Context context, String title, String message,
