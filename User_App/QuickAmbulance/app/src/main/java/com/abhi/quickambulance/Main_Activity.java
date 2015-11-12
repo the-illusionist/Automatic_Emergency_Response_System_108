@@ -67,9 +67,6 @@ public class Main_Activity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-
-
-
 				Connection_Detector cd = new Connection_Detector(getApplicationContext());
 				name=eT.getText().toString().trim();
 				contact=eT2.getText().toString().trim();
@@ -105,7 +102,27 @@ public class Main_Activity extends Activity {
 						gps.showSettingsAlert();
 					}
 
-					new HttpAsyncTask().execute("http://172.16.100.139:3000");
+					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Main_Activity.this);
+					alertDialogBuilder.setMessage("Are you sure, You want to request an Ambulance?");
+
+					alertDialogBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface arg0, int arg1) {
+							Toast.makeText(Main_Activity.this, "Ambulance requested, Please wait", Toast.LENGTH_LONG).show();
+							new HttpAsyncTask().execute("http://172.16.100.139:3000");
+						}
+					});
+
+					alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							finish();
+						}
+					});
+
+					AlertDialog alertDialog = alertDialogBuilder.create();
+					alertDialog.show();
+
 				} else {
 					showAlertDialog(Main_Activity.this,
 							"No Internet Connection",
@@ -238,7 +255,7 @@ public class Main_Activity extends Activity {
 		// onPostExecute displays the results of the AsyncTask.
 		@Override
 		protected void onPostExecute(String result) {
-			Toast.makeText(getBaseContext(), "Info Sent!", Toast.LENGTH_LONG).show();
+			//Toast.makeText(getBaseContext(), "Info Sent!", Toast.LENGTH_LONG).show();
 
 			// parsing data
 			String json_string="";

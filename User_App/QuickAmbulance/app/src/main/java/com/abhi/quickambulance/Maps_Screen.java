@@ -46,7 +46,7 @@ public class Maps_Screen extends Activity {
     // Google Map
     private GoogleMap googleMap;
     String details,name,contact,lati,longi,vehicle_num,id;
-    int $num;
+    int $num,end_var=0;
     User_Info user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -238,14 +238,22 @@ public class Maps_Screen extends Activity {
                 JSONObject jObject = new JSONObject(result);
 //                name = jObject.getString("name");
 //                contact = jObject.getString("contact");
-                lati = jObject.getString("lati");
-                longi = jObject.getString("longi");
-//                vehicle_num = jObject.getString("vehicle");
-                id = jObject.getString("_id");
+                if(end_var==1)
+                {
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                }
+                else if(jObject.getString("isActive")=="true")
+                {
+                    Toast.makeText(getBaseContext(), "Reached Successfully to the Hospital", Toast.LENGTH_LONG).show();
+                    end_var=1;
+                }
+                else {
+                    lati = jObject.getString("lati");
+                    longi = jObject.getString("longi");
+                    id = jObject.getString("_id");
+                }
             } catch (JSONException e1) {
                 e1.printStackTrace();
-                // Toast.makeText(getBaseContext(), "No item Found",
-                // Toast.LENGTH_LONG).show();
             } catch (ParseException e1) {
                 e1.printStackTrace();
             }
