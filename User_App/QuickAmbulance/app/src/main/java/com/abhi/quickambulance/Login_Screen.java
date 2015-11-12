@@ -5,6 +5,9 @@ package com.abhi.quickambulance;
  */
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
@@ -170,7 +173,16 @@ public class Login_Screen extends Activity implements OnClickListener,
         switch (v.getId()) {
             case R.id.btn_sign_in:
                 // Signin button clicked
-                signInWithGplus();
+                Connection_Detector cd = new Connection_Detector(getApplicationContext());
+                if (cd.isConnectingToInternet()) {
+                    signInWithGplus();
+                }
+                else
+                {
+                    showAlertDialog(Login_Screen.this,
+                            "No Internet Connection",
+                            "No internet connection.", false);
+                }
                 break;
         }
     }
@@ -180,6 +192,27 @@ public class Login_Screen extends Activity implements OnClickListener,
             mSignInClicked = true;
             resolveSignInError();
         }
+    }
+
+    public void showAlertDialog(Context context, String title, String message,
+                                Boolean status) {
+        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+
+        // Setting Dialog Title
+        alertDialog.setTitle(title);
+
+        // Setting Dialog Message
+        alertDialog.setMessage(message);
+
+        // Setting OK Button
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
     }
 
 }
