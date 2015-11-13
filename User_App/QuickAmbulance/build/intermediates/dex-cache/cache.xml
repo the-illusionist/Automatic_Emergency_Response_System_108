@@ -2,186 +2,186 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-6e33ee68eace03afcc14f13ce7da8d181d2ac76c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-d54f398a190f877495933e71acb8a1de1ce96826.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d405025c600055237c171a0bbabaa49d69696573">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-80f1294b2254b34b3f17761991d05c6ec432ec1a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-38e9b131cf80381ced19eb57362f7d9b0a235d2f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a78183f30e769a98ab4820794f597763088d3065">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-fe438c4ded9f95b260859434f6c079d7c3a0815b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-37eb93e413ff1d58b979e27370588081d1a7f69e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-2d3cb4c0898d763aca24a39270b9deb5d646651b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-61271d4fb1107f848cb4f02e4bf9a58f751a85a6.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-72831fd18d9a6df290df0a9e7265e98aa2bc8176.jar" />
-    </item>
-    <item
         jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="02bac2dc792d78241077861566f2c82da955e7fa">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-2425f368209df1b889bd7aa989efbc76dec0adee.jar" />
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-2425f368209df1b889bd7aa989efbc76dec0adee.jar" />
     </item>
     <item
         jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-ef08ce799b32470062a2d35198804970121680a0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-d2b82fb4be14f8d77f28b6b2edf4cba9d8362c44.jar" />
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-ef08ce799b32470062a2d35198804970121680a0.jar" />
     </item>
     <item
         jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-107af8140d566aeaf5a53791c2f4acde2ff522a8.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-3fbc4e7011f580e04822e7d08b36e106588f8667.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-bb4b3f75914670a743d65a640ce936f24fc6ed6f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-11b7434b47380c9edf965700a92054f0dc7000e2.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-639f6fb03a51c8d712c12603084945012d11ac7a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-2777eeb99c778a17360ea0faa50f9b72a50379bb.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-d2c0ed9fc92ee1a5d327ee6b3c0431323c4a45c0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-b4da0f326551821cf56498e927005eb4d306a13b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-f15b45b5c1e074ead8d8f89dab6d057d3b4941b7.jar" />
-    </item>
-    <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-e2052379acb79551b74718fe2cf1ddd7259aafbc.jar" />
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-107af8140d566aeaf5a53791c2f4acde2ff522a8.jar" />
     </item>
     <item
         jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-30c8f8515fd93bfcdb2cae7b5e87cbc869fa3014.jar" />
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-30c8f8515fd93bfcdb2cae7b5e87cbc869fa3014.jar" />
     </item>
     <item
-        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-0e552ba51aebe920881aa1a6f48b7cda1a2ae719.jar" />
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-3fbc4e7011f580e04822e7d08b36e106588f8667.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-bb4b3f75914670a743d65a640ce936f24fc6ed6f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-2777eeb99c778a17360ea0faa50f9b72a50379bb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-d54f398a190f877495933e71acb8a1de1ce96826.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-80f1294b2254b34b3f17761991d05c6ec432ec1a.jar" />
     </item>
     <item
         jar="C:\Users\Abhi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-fb0c60b898e7e8ae9fa9114de195ab7ff5c97f01.jar" />
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\support-annotations-22.2.1-fb0c60b898e7e8ae9fa9114de195ab7ff5c97f01.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-38e9b131cf80381ced19eb57362f7d9b0a235d2f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-61271d4fb1107f848cb4f02e4bf9a58f751a85a6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-d2c0ed9fc92ee1a5d327ee6b3c0431323c4a45c0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-0e552ba51aebe920881aa1a6f48b7cda1a2ae719.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-d2b82fb4be14f8d77f28b6b2edf4cba9d8362c44.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-e2052379acb79551b74718fe2cf1ddd7259aafbc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-fe438c4ded9f95b260859434f6c079d7c3a0815b.jar" />
     </item>
     <item
         jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
-        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\debug\classes-0048073f02048bbec1b7d422348154d093a4db9c.jar" />
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-0048073f02048bbec1b7d422348154d093a4db9c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-639f6fb03a51c8d712c12603084945012d11ac7a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\internal_impl-22.0.0-11b7434b47380c9edf965700a92054f0dc7000e2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-6e33ee68eace03afcc14f13ce7da8d181d2ac76c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-f15b45b5c1e074ead8d8f89dab6d057d3b4941b7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-b4da0f326551821cf56498e927005eb4d306a13b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-37eb93e413ff1d58b979e27370588081d1a7f69e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\classes-2d3cb4c0898d763aca24a39270b9deb5d646651b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Abhi\AndroidStudioProjects\QuickAmbulance\app\build\intermediates\pre-dexed\release\internal_impl-22.2.1-72831fd18d9a6df290df0a9e7265e98aa2bc8176.jar" />
     </item>
 
 </items>

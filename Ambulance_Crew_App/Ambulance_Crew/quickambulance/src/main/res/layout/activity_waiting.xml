@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity"
+    tools:ignore="MergeRootFrame" >
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:id="@+id/map"
+            tools:layout="@layout/abc_screen_simple" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:background="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/relativeLayout2">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dip"
+            android:background="@color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relativeLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:text="Waiting for Request"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.03"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:text="from User"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.03"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/editName" />
+
+    <EditText
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="Contact"
+        android:ems="10"
+        android:id="@+id/editPhone" />
+
+    <EditText
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Vehicle No."
+        android:ems="10"
+        android:id="@+id/editVehicleNo" />
+
+    <Button
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/nextbutton"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

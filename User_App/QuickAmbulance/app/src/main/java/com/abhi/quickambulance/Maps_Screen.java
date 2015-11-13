@@ -242,7 +242,7 @@ public class Maps_Screen extends Activity {
                 {
                     android.os.Process.killProcess(android.os.Process.myPid());
                 }
-                else if(jObject.getString("isActive")=="true")
+                else if(jObject.getString("isServing")=="false")
                 {
                     Toast.makeText(getBaseContext(), "Reached Successfully to the Hospital", Toast.LENGTH_LONG).show();
                     end_var=1;
