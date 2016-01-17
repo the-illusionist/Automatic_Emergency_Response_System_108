@@ -137,7 +137,7 @@ public class Maps_Screen extends Activity {
             timerTask = new TimerTask() {
                 @Override
                 public void run() {
-                    new HttpAsyncTask().execute("http://172.16.100.139:3000");
+                    new HttpAsyncTask().execute("http://btp1.iitj.ac.in:3000");
                 }
            };
             timer.schedule(timerTask, 0, 10000);

@@ -49,6 +49,24 @@
             </intent-filter>
         </activity>
 
+        <!-- Main2 -->
+        <activity
+            android:name=".Location_Activity"
+            android:label="Quick Ambulance" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Details -->
+        <activity
+            android:name=".Details_Activity"
+            android:label="Quick Ambulance" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- Login_Screen -->
         <activity
             android:name=".Login_Screen"
@@ -61,6 +79,15 @@
         <!-- Maps Screen -->
         <activity
             android:name=".Maps_Screen"
+            android:label="@string/title_activity_maps" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- FAQ Screen -->
+        <activity
+            android:name=".FAQ_Activity"
             android:label="@string/title_activity_maps" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

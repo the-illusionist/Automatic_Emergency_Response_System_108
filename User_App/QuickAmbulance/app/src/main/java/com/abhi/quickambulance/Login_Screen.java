@@ -10,7 +10,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
@@ -46,10 +48,13 @@ public class Login_Screen extends Activity implements OnClickListener,
         // Button click listeners
         btnSignIn.setOnClickListener(this);
 
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this).addApi(Plus.API)
-                .addScope(Plus.SCOPE_PLUS_LOGIN).build();
+        Connection_Detector cd = new Connection_Detector(getApplicationContext());
+        if (cd.isConnectingToInternet()) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this).addApi(Plus.API)
+                    .addScope(Plus.SCOPE_PLUS_LOGIN).build();
+        }
     }
 
     protected void onStart() {
@@ -135,12 +140,27 @@ public class Login_Screen extends Activity implements OnClickListener,
      * Updating the UI, showing/hiding buttons and profile layout
      * */
     private void nextIntent(boolean isSignedIn) {
-        Intent i = new Intent(getApplicationContext(),
-                Main_Activity.class);
-        // sending data to new activity
-        i.putExtra("data", json_string);
-        startActivity(i);
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(this);
+        String saved_id = sharedPreferences.getString("saved_id", "");
+        if (saved_id=="")
+        {
+            Intent i = new Intent(getApplicationContext(),
+                    Details_Activity.class);
+            i.putExtra("data", json_string);
+            startActivity(i);
+            finish();
+        }
+        else
+        {
+            Intent i = new Intent(getApplicationContext(),
+                    Location_Activity.class);
+            i.putExtra("data", json_string);
+            startActivity(i);
+            finish();
+        }
     }
+
 
     /**
      * Fetching user's information name, email, profile pic

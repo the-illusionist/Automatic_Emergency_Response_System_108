@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#f7efe6"
+    android:theme="@android:style/Theme.Black.NoTitleBar" >
+
+    <TextView
+        android:id="@+id/tV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frequently Asked"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dip"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/tV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Questions"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_below="@+id/tV1"
+        android:layout_marginBottom="10dip"
+        android:layout_centerHorizontal="true" />
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:cacheColorHint="#f7efe6"
+        android:layout_below="@+id/tV2" />
+
+</RelativeLayout>

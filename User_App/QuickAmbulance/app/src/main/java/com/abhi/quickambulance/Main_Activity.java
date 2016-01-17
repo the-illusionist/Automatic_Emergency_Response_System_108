@@ -10,6 +10,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.ParseException;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -20,6 +22,8 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.gms.location.LocationListener;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -41,21 +45,35 @@ public class Main_Activity extends Activity {
 	CheckBox cB;
 	// GPSTracker class
 	GPSTracker gps;
-	String name,contact,lati,longi;
-
+	LocationManager lm;
+	Location location;
+	String name,contact,lati,longi,details,email;
+	double latitude, longitude;
 	int $num;
 	User_Info user;
-	String email;
-
+	my_location myLocation = new my_location();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
 		Intent i = getIntent();
 		// getting attached intent data
-		email = i.getStringExtra("data");
-		Log.i("MyActivity1",email);
+		details = i.getStringExtra("json_data");
+		Log.i("user_data1",details);
+
+		try {
+			JSONObject jObject = new JSONObject(details);
+			lati = jObject.getString("lati");
+			longi = jObject.getString("longi");
+			email = jObject.getString("email");
+			Log.i("user_data","lati: "+lati+" longi: "+longi+" email "+email);
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		} catch (ParseException e1) {
+			e1.printStackTrace();
+		}
 
         btn = (Button) findViewById(R.id.button);
 		eT = (EditText) findViewById(R.id.editText);
@@ -68,8 +86,8 @@ public class Main_Activity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				Connection_Detector cd = new Connection_Detector(getApplicationContext());
-				name=eT.getText().toString().trim();
-				contact=eT2.getText().toString().trim();
+				name = eT.getText().toString().trim();
+				contact = eT2.getText().toString().trim();
 				String MobilePattern = "[0-9]{10}";
 				if (name.equals("")) {
 					Toast.makeText(Main_Activity.this,
@@ -86,50 +104,102 @@ public class Main_Activity extends Activity {
 						savePreferences("saved_contact", eT2.getText().toString());
 					}
 
-					gps = new GPSTracker(Main_Activity.this);
-					// check if GPS enabled
-					double latitude = 0;
-					double longitude = 0;
-					if (gps.canGetLocation()) {
-						//while (latitude == 0) {
-						latitude = gps.getLatitude();
-						longitude = gps.getLongitude();
-						//}
-						lati=Double.toString(latitude);
-						longi=Double.toString(longitude);
-						Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+//					}
+					lm = (LocationManager) getSystemService(LOCATION_SERVICE);
+
+					if (lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+						//Toast.makeText(Main_Activity.this, "Getting your current Location, Please wait", Toast.LENGTH_LONG).show();
+						myLocation.getLocation(getApplicationContext(), locationResult);
 					} else {
-						gps.showSettingsAlert();
+						showGPSDisabledAlertToUser();
 					}
 
-					AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Main_Activity.this);
-					alertDialogBuilder.setMessage("Are you sure, You want to request an Ambulance?");
-
-					alertDialogBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface arg0, int arg1) {
-							Toast.makeText(Main_Activity.this, "Ambulance requested, Please wait", Toast.LENGTH_LONG).show();
-							new HttpAsyncTask().execute("http://172.16.100.139:3000");
-						}
-					});
-
-					alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							finish();
-						}
-					});
-
-					AlertDialog alertDialog = alertDialogBuilder.create();
-					alertDialog.show();
-
 				} else {
-					showAlertDialog(Main_Activity.this,
-							"No Internet Connection",
-							"No internet connection.", false);
+					showInternetDisabledAlertToUser();
 				}
 			}
 		});
+	}
+
+	public my_location.LocationResult locationResult = new my_location.LocationResult() {
+
+		@Override
+		public void gotLocation(Location location) {
+			// TODO Auto-generated method stub
+
+			if(location!=null)
+			{
+				//Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + lati + "\nLong: " + longi, Toast.LENGTH_LONG).show();
+				AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Main_Activity.this);
+				alertDialogBuilder.setMessage("Are you sure, You want to request an Ambulance?");
+
+				alertDialogBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface arg0, int arg1) {
+						Toast.makeText(Main_Activity.this, "Ambulance requested, Please wait", Toast.LENGTH_LONG).show();
+						new HttpAsyncTask().execute("http://btp1.iitj.ac.in:3000");
+					}
+				});
+
+				alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						finish();
+					}
+				});
+
+				AlertDialog alertDialog = alertDialogBuilder.create();
+				alertDialog.show();
+			}
+			else
+			{
+				Toast.makeText(Main_Activity.this, "User location not found, Please try again", Toast.LENGTH_LONG).show();
+			}
+		}
+	};
+
+	private void showInternetDisabledAlertToUser(){
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+		alertDialogBuilder.setMessage("No Internet Connection. Would you like to enable it?")
+				.setCancelable(false)
+				.setPositiveButton("Enable Internet",
+						new DialogInterface.OnClickListener(){
+							public void onClick(DialogInterface dialog, int id){
+								Intent callGPSSettingIntent = new Intent(
+										android.provider.Settings.ACTION_WIRELESS_SETTINGS);
+								startActivity(callGPSSettingIntent);
+							}
+						});
+		alertDialogBuilder.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});
+		AlertDialog alert = alertDialogBuilder.create();
+		alert.show();
+	}
+
+	private void showGPSDisabledAlertToUser(){
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+		alertDialogBuilder.setMessage("GPS is disabled in your device. Would you like to enable it?")
+				.setCancelable(false)
+				.setPositiveButton("Enable GPS",
+						new DialogInterface.OnClickListener(){
+							public void onClick(DialogInterface dialog, int id){
+								Intent callGPSSettingIntent = new Intent(
+										android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+								startActivity(callGPSSettingIntent);
+							}
+						});
+		alertDialogBuilder.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});
+		AlertDialog alert = alertDialogBuilder.create();
+		alert.show();
 	}
 
 	private void loadSavedPreferences() {
@@ -164,28 +234,8 @@ public class Main_Activity extends Activity {
 		editor.commit();
 	}
 
-	public void showAlertDialog(Context context, String title, String message,
-								Boolean status) {
-		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 
-		// Setting Dialog Title
-		alertDialog.setTitle(title);
-
-		// Setting Dialog Message
-		alertDialog.setMessage(message);
-
-		// Setting OK Button
-		alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
-				dialog.cancel();
-			}
-		});
-
-		// Showing Alert Message
-		alertDialog.show();
-	}
-
-	public String POST(String url, User_Info user){
+	public String POST(String url, User_Info user) {
 		InputStream inputStream = null;
 		String result = "";
 		try {
@@ -272,12 +322,20 @@ public class Main_Activity extends Activity {
 				e1.printStackTrace();
 			}
 
-			// Launching new Activity on selecting single List Item
-			Intent i = new Intent(getApplicationContext(),
-					Maps_Screen.class);
-			// sending data to new activity
-			i.putExtra("json_data", json_string);
-			startActivity(i);
+			// Launching new Activity
+			if(result.toLowerCase().contains("name"))
+			{
+				Intent i = new Intent(getApplicationContext(),
+						Maps_Screen.class);
+				// sending data to new activity
+				i.putExtra("json_data", json_string);
+				startActivity(i);
+				finish();
+			}
+			else
+			{
+				Toast.makeText(getBaseContext(), "No Ambulance available right now, Please try after sometime", Toast.LENGTH_LONG).show();
+			}
 		}
 	}
 
